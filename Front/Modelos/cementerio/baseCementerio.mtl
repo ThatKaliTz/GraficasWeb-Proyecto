@@ -1,0 +1,142 @@
+newmtl VAYAFBXASC0323SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.30 0.30 0.30
+Tf 0.30 0.30 0.30
+map_Kd snow_Material__259_BaseColor.1001.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 18.00
+newmtl VAYAFBXASC0323SG1
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl lambert2SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__259_BaseColor.1001.png
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+newmtl lambert5SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__265_BaseColor.1001.png
+Ni 1.00
+newmtl lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__270_BaseColor.1001.png
+Ni 1.00
+newmtl lambert7SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+newmtl lambert8SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+newmtl lambert9SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd Ground_Dirt_009_BaseColor.jpg
+Ni 1.00
+newmtl pasted__Box001SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__Box001SG2
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__PS_Mesher004SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__PS_Mesher004SG1
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__PS_Mesher004SG2
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__VAYAFBXASC0323SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__259_BaseColor.1001.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__VAYAFBXASC0323SG1
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl pasted__lambert4SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__2711_BaseColor.1001.png
+Ni 1.00

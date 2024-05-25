@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find and Run - Menu Opciones</title>
+
+    <!-- Enlaces a hojas de estilo CSS u otros recursos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Protest Revolution", sans-serif;
+            overflow: hidden;
+            /* Oculta la barra de desplazamiento */
+            background-image: url('Imagenes/dificultadfondo2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            /* Fija la imagen de fondo */
+        }
+
+        .protest-revolution-regular {
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .Container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Centrar horizontalmente */
+            /*justify-content: center; /* Centrar verticalmente */
+            height: 100vh;
+            /* Para ocupar toda la altura de la ventana */
+        }
+
+        .logo-juego {
+            margin-top: 5%;
+            margin-left: 5%;
+            height: auto;
+            /* Altura automática para mantener la proporción */
+            margin-bottom: 10%;
+        }
+
+        .Container_btn {
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* Centrar horizontalmente los botones */
+            gap: 60%;
+            /* Espacio entre los botones */
+        }
+
+        .Container_izquierda {
+            width: 100%;
+        }
+
+        .Container_btn_izquierda,
+        .Container_btn_derecha {
+            width: 100%;
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            /* Centra horizontalmente los elementos */
+            gap: 30%;
+            /* Espacio entre los botones */
+        }
+
+        input {
+            width: 700px;
+            text-align: center;
+            max-width: 300px;
+            background-color: #ffffff;
+            padding: 15px;
+            border: 0;
+            color: #000;
+            font-size: 30px;
+            text-transform: uppercase;
+            align-items: center;
+            border-radius: 20px;
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 1000;
+            font-style: normal;
+        }
+
+        /* Estilos para los botones */
+        button {
+            width: 100%;
+            max-width: 300px;
+            background-color: #ffffff;
+            padding: 15px;
+            border: 0;
+            color: #000;
+            font-size: 18px;
+            text-transform: uppercase;
+            align-items: center;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 1000;
+            font-size: x-large;
+            font-style: normal;
+        }
+
+        #btn_Regresar:hover,
+        button:hover {
+            transform: translateY(-3px);
+            /* Desplazar hacia arriba para efecto 3D */
+            background: #000000;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(153, 0, 255, 0.5);
+            /* Sombra más pronunciada */
+            cursor: pointer;
+        }
+
+        /* Estilo para botones seleccionados */
+        .selected {
+            background-color: #7700ff;
+            /* Color de fondo seleccionado */
+            color: #fff;
+            /* Color de texto seleccionado */
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+            /* Sombra más pronunciada */
+        }
+
+        /* Estilo para el botón NORMAL */
+        .btn_Normal {
+            background-color: #ffffff;
+            color: #000;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 0;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 1000;
+            font-size: x-large;
+            font-style: normal;
+        }
+
+        /* Estilo para el botón DIFÍCIL */
+        .btn_Dificil {
+            background-color: #ffffff;
+            color: #000;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 0;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 1000;
+            font-size: x-large;
+            font-style: normal;
+        }
+    </style>
+
+<script>
+    const nombre = JSON.parse(sessionStorage.getItem("nombre"));
+    if (nombre && nombre.name){
+        alert('Hola ' + nombre.name);
+    }else{
+        alert('No estás logueado con FB.');
+        
+        //window.location.href = 'MenuInicial.html';
+    }
+</script>
+
+</head>
+
+
+<body>
+
+    <!-- Contenido de la página -->
+    <div class="Container">
+
+        <!--logo-->
+        <div class="logo-juego">
+            <img src="Imagenes/LogoNegro.png" class="logo_Opciones">
+        </div>
+
+        <!-- Botones -->
+        <div class="Container_btn">
+
+            <!-- Botón NORMAL -->
+            <div class="Container_izquierda">
+                <button class="btn_Normal" onclick="location.href='Nivel1.html'">NORMAL</button>
+            </div>
+
+            <!-- Botón DIFÍCIL -->
+            <div class="Container_derecha">
+                <button class="btn_Dificil" onclick="location.href='Nivel1Dificil.html'">DIFÍCIL</button>
+            </div>
+
+        </div>
+
+        <div class="Container_btn_Regreso">
+            <input type="button" value="Regresar" id="btn_RegresarMenuI" onclick="location.href='MenuInicial.html'">
+        </div>
+
+    </div>
+
+
+    <!--Scripts-->
+    <script src="script.js"></script>
+    <script src="./js/MenuOpcopiones.js"></script>
+
+</body>
+
+</html>

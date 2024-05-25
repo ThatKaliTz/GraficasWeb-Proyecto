@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Protest Revolution", sans-serif;
+    overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
+.protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+body {
+    background-image: url('../Imagenes/img_fondoMenuPrincipal.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.Container{
+    margin-top: 5%;
+    margin-left: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-juego{
+    margin-top: 5%;
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.Content_btn{
+    width: 40%;
+    margin-top: 10%;
+}
+
+
+/* Estilos para los botones */
+button {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 0;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 1000;
+    font-size: x-large;
+    font-style: normal;
+}
+
+button:hover {
+    transform: translateY(-3px); /* Desplazar hacia arriba para efecto 3D */
+    background: #000000;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(153, 0, 255, 0.5); /* Sombra más pronunciada */
+}

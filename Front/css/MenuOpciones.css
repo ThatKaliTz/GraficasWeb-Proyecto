@@ -1,0 +1,120 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Protest Revolution", sans-serif;
+    overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
+.protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+body {
+    background-image: url('../Imagenes/img_fondoOpciones.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    /*justify-content: center; /* Centrar verticalmente */
+    height: 100vh; /* Para ocupar toda la altura de la ventana */
+}
+
+.logo-juego{
+    margin-top: 5%;
+    margin-left: 5%;
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-bottom: 10%;
+}
+
+.Container_btn {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrar horizontalmente los botones */
+    gap: 60%; /* Espacio entre los botones */
+}
+
+.Container_izquierda{
+    width: 100%;
+}
+
+.Container_btn_izquierda,
+.Container_btn_derecha{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    gap: 30%; /* Espacio entre los botones */
+}
+
+input{ 
+    width: 700px;
+    text-align: center;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 0;
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+    align-items: center;
+    border-radius: 20px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+/* Estilos para los botones */
+button {
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 0;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 1000;
+    font-size: x-large;
+    font-style: normal;
+}
+
+#btn_Regresar:hover,
+button:hover {
+    transform: translateY(-3px); /* Desplazar hacia arriba para efecto 3D */
+    background: #000000;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(153, 0, 255, 0.5); /* Sombra más pronunciada */
+    cursor: pointer;
+}
+
+
+/* Estilo para botones seleccionados */
+.selected {
+    background-color: #7700ff; /* Color de fondo seleccionado */
+    color: #fff; /* Color de texto seleccionado */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5); /* Sombra más pronunciada */
+}
+
+
+
+
+
+
+
+

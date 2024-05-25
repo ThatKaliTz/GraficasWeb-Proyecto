@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find and Run - Menu Inicial</title>
+    <!-- Enlaces a hojas de estilo CSS u otros recursos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/MenuInicial.css">
+    <style>
+        .fb-login-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            transform: scale(1.5); /* Aumenta el tamaño del botón */
+            transform-origin: top left; /* Mantiene la posición en la esquina superior izquierda */
+        }
+
+        /* Estilos para el mensaje de bienvenida y despedida */
+        #welcome-message, #goodbye-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000; /* Fondo negro */
+            color: #ff0000; /* Letras rojas */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 1000; /* Asegurar que esté sobre el fondo oscuro */
+        }
+
+        #welcome-message.show, #goodbye-message.show {
+            display: block;
+        }
+
+        /* Estilos para el fondo oscuro */
+        #dark-overlay {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+            z-index: 999; /* Por debajo del mensaje de bienvenida y despedida */
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenido de la página -->
+    <div class="Container">
+        <!--logo-->
+        <div class="logo-juego">
+            <img src="Imagenes/logo.png" class="logo_Inicio">
+        </div>
+        <!-- Botones -->
+        <div class="Content_btn">
+            <a href="Nivel1.html"><button id="btn_Play">Play</button>
+            <a href="Puntuaciones.html"><button id="btn_Puntuaciones">Puntuaciones</button></a>
+            <a href="MenuOpciones.html"><button id="btn_Opciones">Opciones</button></a>
+            <button id="btn_Salir">Salir</button>
+        </div>
+    </div>
+    <!-- Contenedor para el mensaje de bienvenida -->
+    <div id="welcome-message">Bienvenido</div>
+    <!-- Contenedor para el mensaje de despedida -->
+    <div id="goodbye-message">
+        ¡Hasta luego! Esperamos verte pronto.
+    </div>
+    <!-- Contenedor para el fondo oscuro -->
+    <div id="dark-overlay"></div>
+    <!--Scripts-->
+    <script>
+        // Función para mostrar el mensaje de bienvenida y oscurecer el fondo
+        function showWelcomeMessage(name) {
+            const welcomeMessage = document.getElementById('welcome-message');
+            welcomeMessage.innerText = 'Bienvenido ' + name + '.';
+            welcomeMessage.classList.add('show');
+            // Mostrar el fondo oscuro
+            document.getElementById('dark-overlay').style.display = 'block';
+        }
+
+        // Función para mostrar el mensaje de despedida y oscurecer el fondo
+        function showGoodbyeMessage() {
+            const goodbyeMessage = document.getElementById('goodbye-message');
+            goodbyeMessage.classList.add('show');
+            // Mostrar el fondo oscuro
+            document.getElementById('dark-overlay').style.display = 'block';
+        }
+
+        // Obtener referencia al botón "Play"
+        const btnPlay = document.getElementById('btn_Play');
+
+        // Agregar un evento de clic al botón "Play"
+        btnPlay.addEventListener('click', function () {
+            // Redirigir a la página Nivel1.html
+            window.location.href = 'Nivel1.html';
+        });
+
+        // Agregar funcionalidad al botón "Salir"
+        document.getElementById('btn_Salir').addEventListener('click', function () {
+            // Mostrar el mensaje de despedida y oscurecer el fondo
+            showGoodbyeMessage();
+            // Eliminar el nombre del usuario de sessionStorage
+            sessionStorage.removeItem("nombre");
+            // Redirigir al usuario a la página de inicio o login después de un breve retraso
+            setTimeout(function(){
+                window.location.href = 'index.html';
+            }, 2000); // Tiempo en milisegundos (en este caso, 2 segundos)
+        });
+
+        // Agregar un evento de clic al mensaje de bienvenida para ocultarlo
+        document.getElementById('welcome-message').addEventListener('click', function () {
+            this.classList.remove('show');
+            // Ocultar el fondo oscuro
+            document.getElementById('dark-overlay').style.display = 'none';
+        });
+
+        // Agregar un evento de clic al mensaje de despedida para ocultarlo y redirigir al usuario
+        document.getElementById('goodbye-message').addEventListener('click', function () {
+            // Ocultar el mensaje de despedida
+            this.classList.remove('show');
+            // Ocultar el fondo oscuro
+            document.getElementById('dark-overlay').style.display = 'none';
+            // Redirigir al usuario a la página de inicio o login
+            window.location.href = 'index.html';
+        });
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1448729352687666',
+                xfbml: true,
+                version: 'v19.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function checkLoginState() {
+            FB.login(function (response) {
+                if (response.authResponse) {
+                    console.log('Welcome!  Fetching your information.... ');
+                    FB.api('/me', function (response) {
+                        // Mostrar el mensaje de bienvenida y oscurecer el fondo
+                        showWelcomeMessage(response.name);
+                        // Guardar los datos del usuario en localStorage
+                        sessionStorage.setItem("nombre", response.name);
+                        // Puedes guardar más datos según sea necesario
+                    });
+                } else {
+                    alert('Error al logear con facebook');
+                }
+            });
+        }
+
+        function publicar() {
+            FB.ui({
+                display: 'popup',
+                method: 'share',
+                href: '',
+            }, function (response) { });
+        }
+    </script>
+    <!-- Contenedor del botón de inicio de sesión de Facebook -->
+    <div class="fb-login-container">
+        <fb:login-button
+            scope="public_profile,email"
+            onlogin="checkLoginState();">
+        </fb:login-button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+</body>
+</html>

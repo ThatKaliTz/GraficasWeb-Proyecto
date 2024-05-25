@@ -1,0 +1,17 @@
+newmtl Wood:Wood
+illum 4
+Kd 0.8 0.8 0.8  // Cambia el coeficiente difuso para el color base (RGB)
+Ka 1.0 1.0 1.0  // Cambia el coeficiente ambiental para el color base (RGB)
+Tf 1.0 1.0 1.0
+Ni 1.5  // Cambia el índice de refracción según sea necesario
+Ks 0.1 0.1 0.1  // Cambia el coeficiente especular para el color base (RGB)
+Ns 96.08  // Cambia el exponente especular según sea necesario
+
+newmtl Wood:WoodCut
+illum 4
+Kd 0.8 0.8 0.8  // Cambia el coeficiente difuso para el color base (RGB)
+Ka 1.0 1.0 1.0  // Cambia el coeficiente ambiental para el color base (RGB)
+Tf 1.0 1.0 1.0
+Ni 1.5  // Cambia el índice de refracción según sea necesario
+Ks 0.1 0.1 0.1  // Cambia el coeficiente especular para el color base (RGB)
+Ns 96.08  // Cambia el exponente especular según sea necesario

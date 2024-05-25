@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find and Run - Menu Opciones</title>
+
+    <!-- Enlaces a hojas de estilo CSS u otros recursos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/MenuOpciones.css">
+</head>
+
+<body>
+    <!-- Contenido de la página -->
+    <div class="Container">
+        <!--logo-->
+        <div class="logo-juego">
+            <img src="Imagenes/LogoNegro_Opciones.png" class="logo_Opciones">
+        </div>
+
+        <!-- Botones -->
+        <div class="Container_btn">
+            <!-- Botones en la parte inferior izquierda -->
+            <div class="Container_izquierda">
+                <input type="button" value="Mutear Juego" disabled>
+                <div class="Container_btn_izquierda">
+                    <button class="btn_SiMutearJuego">Si</button>
+                    <button class="btn_NoMutearJuego">No</button>
+                </div>
+            </div>
+
+            <!-- Botones en la parte inferior derecha -->
+            <div class="Container_derecha">
+                <input type="button" value="Modo de Juego" disabled>
+                <div class="Container_btn_derecha">
+                    <button class="btn_ModoCooperativo" onclick="setModo(0)">Cooperativo</button>
+                    <button class="btn_ModoCompetitivo" onclick="setModo(1)">Competitivo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="Container_btn_Regreso">
+            <input type="button" value="Regresar" id="btn_RegresarMenuI" onclick="location.href='MenuInicial.html'">
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script>
+        function setModo(modo) {
+            window.Modo = modo;
+            localStorage.setItem('Modo', modo);
+            alert("Modo actual: " + window.Modo);
+        }
+    </script>
+    <script src="script.js"></script>
+    <script src="js/score.js"></script>
+    <script type="module" src="js/score.js"></script>
+</body>
+
+</html>

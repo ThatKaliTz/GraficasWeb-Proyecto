@@ -1,0 +1,7 @@
+newmtl lambert2SG
+illum 4
+Kd 0.30 0.30 0.30
+Ka 0.30 0.30 0.30
+Tf 1.00 1.00 1.00
+map_Kd snow_Material__270_BaseColor.1001.png
+Ni 1.00

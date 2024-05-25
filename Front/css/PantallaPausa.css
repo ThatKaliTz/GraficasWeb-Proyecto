@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Protest Revolution", sans-serif;
+    overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
+
+body {
+    background-image: url('../Imagenes/img_fondoPause.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    font-family: "Protest Revolution", sans-serif;
+    
+}
+
+.Container{
+    width: 100%;
+}
+
+.logo-juego{
+    margin-top: 5%;
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.logo_juegoPause{
+    margin-left: 50%;
+}
+
+.Content_btn{
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+}
+
+
+/* Estilos para los botones */
+input[type="button"] {
+    width: 90%;
+    margin-left: 2%;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 0;
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+input:hover {
+    transform: translateY(-3px); /* Desplazar hacia arriba para efecto 3D */
+    background: #000000;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(153, 0, 255, 0.5); /* Sombra más pronunciada */
+}
